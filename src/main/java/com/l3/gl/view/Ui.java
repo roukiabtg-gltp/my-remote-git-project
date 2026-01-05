@@ -1,3 +1,4 @@
+
 package com.l3.gl.view;
 
 import javax.swing.*;
@@ -24,3 +25,4 @@ public class Ui extends JFrame {
         });
     }
 }
+
