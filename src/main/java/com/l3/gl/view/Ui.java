@@ -1,22 +1,27 @@
 
 package com.l3.gl.view;
 import javax.swing.*;
-public class Ui {
-private JFrame frame;
-public Ui() {
-frame = new JFrame("Simple UI");
-frame.setSize(400, 300);
-frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-JPanel panel = new JPanel();
-JButton button = new JButton("Click Me");
-panel.add(button);
-frame.add(panel);
+import java.awt.*;
+
+public class Ui extends JFrame {
+    public Ui() {
+        // Set window properties
+        setTitle("Inventory Management System - MyGitApp");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        // Add a simple welcome label
+        JLabel label = new JLabel("Welcome to Java & Git Project", SwingConstants.CENTER);
+        label.setFont(new Font("Arial", Font.BOLD, 16));
+        add(label);
+    }
+
+    public static void main(String[] args) {
+        // Run the GUI
+        SwingUtilities.invokeLater(() -> {
+            new Ui().setVisible(true);
+        });
+    }
 }
-public void show() {
-frame.setVisible(true);
-}
-public static void main(String[] args) {
-Ui ui = new Ui();
-ui.show();
-}
-}
+
